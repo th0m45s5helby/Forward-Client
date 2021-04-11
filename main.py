@@ -23,7 +23,7 @@ async def main(client, message):
         await message.edit(
             text="This UserBot can forward messages from any Chat to any other Chat XD\n\nDeveloper: @AbirHasan2005",
             parse_mode="Markdown", disable_web_page_preview=True)
-    elif message.chat.id == (int(Config.FORWARD_FROM_CHAT_ID)):
+    elif 1: #message.chat.id == (int(Config.FORWARD_FROM_CHAT_ID)):
         try:
             await message.forward(int(Config.FORWARD_TO_CHAT_ID))
         except FloodWait as e:
