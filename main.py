@@ -25,7 +25,7 @@ async def main(client, message):
             parse_mode="Markdown", disable_web_page_preview=True)
     elif 1: #message.chat.id == (int(Config.FORWARD_FROM_CHAT_ID)):
         try:
-            await message.forward(int(Config.FORWARD_TO_CHAT_ID))
+            await message.copy(int(Config.FORWARD_TO_CHAT_ID))
         except FloodWait as e:
             await client.send_message(chat_id="me", text=f"#FloodWait: Stopping Forwarder for `{e.x}s`!")
             await asyncio.sleep(e.x)
