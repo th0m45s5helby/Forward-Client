@@ -26,7 +26,7 @@ async def main(client, message):
     elif message.chat.id == -1001489565747:
         try:
             if message.media:
-                await message.copy(int(Config.FORWARD_TO_CHAT_ID)
+                await message.copy(int(Config.FORWARD_TO_CHAT_ID))
         except Exception as err:
             await client.send_message(chat_id="me",text=f"#ERROR: `{err}`")
            
