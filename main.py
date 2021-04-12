@@ -10,7 +10,7 @@ User = Client(session_name=Config.STRING_SESSION, api_hash=Config.API_HASH, api_
 async def forward():
     async for message in User.iter_history(-1001177624846):
         try:
-            message.copy(int(Config.FORWARD_TO_CHAT_ID))
+            await message.copy(int(Config.FORWARD_TO_CHAT_ID))
         except FloodWait as e:
             await client.send_message(chat_id="me", text=f"#FloodWait: Stopping Forwarder for `{e.x}s`!")
             await asyncio.sleep(e.x)
