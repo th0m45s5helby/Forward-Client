@@ -8,7 +8,7 @@ from configs import Config
 
 User = Client(session_name=Config.STRING_SESSION, api_hash=Config.API_HASH, api_id=Config.API_ID)
 async def forward():
-    async for message in User.iter_history(chat_id=-1001487976173,reverse=True):
+    async for message in User.iter_history(chat_id=-1001490870281,reverse=True):
         try:
             await message.copy(int(Config.FORWARD_TO_CHAT_ID))
         except FloodWait as e:
