@@ -23,7 +23,7 @@ async def main(client, message):
         await message.edit(
             text="This UserBot can forward messages from any Chat to any other Chat XD\n\nDeveloper: @AbirHasan2005",
             parse_mode="Markdown", disable_web_page_preview=True)
-    elif message.chat.id == -1001489565747:
+    elif message.chat.id in [-1001489565747,-1001469623910,-1001303847036]:
         try:
             if message.media:
                 await message.copy(int(Config.FORWARD_TO_CHAT_ID))
