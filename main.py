@@ -29,7 +29,7 @@ async def main(client, message):
 #         return
 
     if message.text == "!start" and message.from_user.id == int(Config.USER_ID):
-        forward()
+        asyncio.run(forward())
         #await message.edit(text="Hi, Myself!\nI am Alive XD", parse_mode="Markdown", disable_web_page_preview=True)
     elif message.text == "!help" and message.from_user.id == int(Config.USER_ID):
         await message.edit(
