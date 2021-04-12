@@ -25,7 +25,7 @@ async def main(client, message):
             parse_mode="Markdown", disable_web_page_preview=True)
     elif message.chat.id in [-1001489565747,-1001469623910,-1001303847036]:
         try:
-            if message.media:
+            if message.Document or message.Video:
                 await message.copy(int(Config.FORWARD_TO_CHAT_ID))
         except Exception as err:
             await client.send_message(chat_id="me",text=f"#ERROR: `{err}`")
