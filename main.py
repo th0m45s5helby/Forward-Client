@@ -37,13 +37,50 @@ async def main(client, message):
         await message.edit(
             text="This UserBot can forward messages from any Chat to any other Chat XD\n\nDeveloper: @AbirHasan2005",
             parse_mode="Markdown", disable_web_page_preview=True)
+        
+    #Discussion Groups
     elif message.chat.id in [-1001489565747,-1001469623910,-1001303847036]:
         try:
             if message.document or message.video:
                 await message.copy(int(Config.FORWARD_TO_CHAT_ID))
+        except FloodWait as e:
+            await client.send_message(chat_id="me", text=f"#FloodWait: Stopping Forwarder for `{e.x}s`!")
+            await asyncio.sleep(e.x)                
         except Exception as err:
             await client.send_message(chat_id="me",text=f"#ERROR: `{err}`")
-           
+            
+    #shit groups       
+    elif message.chat.id in [-1001241045879,-1001070638809,-1001251040739,-1001223490085,-1001249868267]:
+        try:
+            await message.copy(-1001246890448)
+        except FloodWait as e:
+            await client.send_message(chat_id="me", text=f"#FloodWait: Stopping Forwarder for `{e.x}s`!")
+            await asyncio.sleep(e.x)
+        except Exception as err:
+            await client.send_message(chat_id="me",text=f"#ERROR: `{err}`")    
+            
+    #music dumps
+    elif message.chat.id in [-1001404547974,-1001465090476,-1001496231559,-1001159255686]:
+        try:
+            await message.copy(-1001439463170)
+        except FloodWait as e:
+            await client.send_message(chat_id="me", text=f"#FloodWait: Stopping Forwarder for `{e.x}s`!")
+            await asyncio.sleep(e.x)
+        except Exception as err:
+            await client.send_message(chat_id="me",text=f"#ERROR: `{err}`") 
+            
+    #mirror groups
+    elif message.chat.id in [-1001365075639,-1001387196715,-1001464376351,-1001339069584,-1001444610509,-1001187364301]:
+        try:
+            if message.document or message.video:
+                await message.copy(-1001268758860)
+        except FloodWait as e:
+            await client.send_message(chat_id="me", text=f"#FloodWait: Stopping Forwarder for `{e.x}s`!")
+            await asyncio.sleep(e.x)
+        except Exception as err:
+            await client.send_message(chat_id="me",text=f"#ERROR: `{err}`")            
+            
+    #movie channels       
     elif 1 : #message.chat.id == (int(Config.FORWARD_FROM_CHAT_ID)):
         try:
             await message.copy(int(Config.FORWARD_TO_CHAT_ID))
