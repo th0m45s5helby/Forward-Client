@@ -14,4 +14,4 @@ class Config(object):
     # Forward To Chat ID
     FORWARD_TO_CHAT_ID = "-1001384761806"
     # Your User ID
-    USER_ID = "1683742900"
+    USER_ID = "1777662196"
