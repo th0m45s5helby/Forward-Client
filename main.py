@@ -50,7 +50,7 @@ async def main(client, message):
             await client.send_message(chat_id="me",text=f"#ERROR: `{err}`")
             
     #shit groups       
-    elif message.chat.id in [-1001241045879,-1001070638809,-1001251040739,-1001223490085,-1001249868267]:
+    elif message.chat.id in [-1001241045879,-1001070638809,-1001251040739,-1001223490085,-1001249868267,-1001296194994]:
         try:
             await message.copy(-1001246890448)
         except FloodWait as e:
