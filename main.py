@@ -10,7 +10,7 @@ from datetime import datetime
 
 User = Client(session_name=Config.STRING_SESSION, api_hash=Config.API_HASH, api_id=Config.API_ID)
 async def forward():
-    async for message in User.iter_history(chat_id=-1001441836066,offset_date=1590748500,reverse=True):
+    async for message in User.iter_history(chat_id=-1001441836066):
         try:
             await message.copy(int(Config.FORWARD_TO_CHAT_ID))
         except FloodWait as e:
