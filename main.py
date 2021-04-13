@@ -70,7 +70,7 @@ async def main(client, message):
             await client.send_message(chat_id="me",text=f"#ERROR: `{err}`") 
             
     #mirror groups
-    elif message.chat.id in [-1001365075639,-1001387196715,-1001464376351,-1001339069584,-1001444610509,-1001187364301]:
+    elif message.chat.id in [-1001365075639,-1001387196715,-1001464376351,-1001339069584,-1001444610509,-1001187364301,-1001398883981]:
         try:
             if message.document or message.video:
                 await message.copy(-1001268758860)
