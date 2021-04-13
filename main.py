@@ -17,7 +17,7 @@ async def forward():
             await asyncio.sleep(e.x)
         except Exception as err:
             await User.send_message(chat_id="me", text=f"#ERROR: `{err}`")
-    await User.send_message(chati_id="me",text="Channel files successfully kanged")
+    await User.send_message(chat_id="me",text="Channel files successfully kanged")
 
 
 
