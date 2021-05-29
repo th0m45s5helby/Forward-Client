@@ -60,7 +60,7 @@ async def main(client, message):
             await client.send_message(chat_id="me",text=f"#ERROR: `{err}`")    
             
     #music dumps
-    elif message.chat.id in [-1001404547974,-1001465090476,-1001496231559,-1001159255686]:
+    elif message.chat.id in [-1001404547974,-1001465090476,-1001496231559,-1001159255686,-1001475278406]:
         try:
             await message.copy(-1001439463170)
         except FloodWait as e:
